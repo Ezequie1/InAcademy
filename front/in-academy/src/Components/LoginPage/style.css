@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Montserrat';
+    color: #000;
+}
+
+.content{
+    height: 100vh;
+    transition: 0.5s;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.formLogin{
+    height: 510px;
+    width: 380px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.30) 0px 5px 15px;
+}
+
+.LogoInmetrics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imgLogo{
+    width: 500px;
+    margin-left: 200px;
+}
+
+.divLogoAcademy{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.logoAcademy{
+    height: 90px;
+    width: 90px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.login{
+    color: #00000080;
+}
+
+.divInputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+}
+
+.texts{
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+    font-family: sans-serif;
+}
+
+.link{
+    cursor: pointer;
+    color: #009CE0;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.principalText{
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Montserrat';
+}
+
+.divOu{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 10% 4% 10%;
+}
+
+.line{
+    width: 100%;
+    background-color: #d6d6d6;
+    height: 2px;
+}
+
+.textOu{
+    color: grey;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.divButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logoMicrosoft{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.ssoLogin{
+    width: 80%;
+    border: 1px solid grey;
+    height: 35px;
+    background-color: transparent;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.inputSingle{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 15px 0;
+    position: relative;
+}
+
+.inputLabel{
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    color: rgb(150, 150, 150);
+    cursor: text;
+    transition: 0.3s ease-in-out;
+}
+
+.inputStyle{
+    width: 100%;
+    color: rgb(56, 56, 56);
+    border: 0;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: 18px;
+}
+
+.password{
+    margin-right: -30px;
+    padding-right: 30px;
+}
+
+.inputStyle:focus,
+.inputStyle:valid{
+    border-bottom: 1px solid #ffca00;
+}
+
+.inputStyle:focus ~ label,
+.inputStyle:valid ~ label{
+    transform: translateY(-25px);
+    font-size: 12px;
+    color: #ffca00;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+.button{
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+    color:#000000bb;
+    background-color: #ffca00;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
