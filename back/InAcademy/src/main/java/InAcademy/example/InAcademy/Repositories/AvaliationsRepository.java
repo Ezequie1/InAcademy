@@ -1,9 +1,9 @@
 package InAcademy.example.InAcademy.Repositories;
 
-import InAcademy.example.InAcademy.Model.RegistrationModel;
+import InAcademy.example.InAcademy.Model.AvaliationsModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RegistrationRepository extends JpaRepository<RegistrationModel, Long> {
+public interface AvaliationsRepository extends JpaRepository<AvaliationsModel, Long> {
 }

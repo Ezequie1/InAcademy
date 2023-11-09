@@ -1,5 +1,6 @@
 package InAcademy.example.InAcademy.Security;
 
+import InAcademy.example.InAcademy.Model.UserModel;
 import InAcademy.example.InAcademy.Repositories.UserRepository;
 import InAcademy.example.InAcademy.Service.TokenService;
 import jakarta.servlet.FilterChain;
@@ -29,7 +30,7 @@ public class SecurityFilter extends OncePerRequestFilter {
 
         if(token != null){
             var login = tokenService.validateToken(token);
-            UserDetails user = userRepository.findByEmail(login);
+            UserModel user = userRepository.findByEmail(login);
 
             var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
 

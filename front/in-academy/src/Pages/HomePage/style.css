@@ -1,0 +1,125 @@
+
+body{
+    overflow-x: hidden;
+}
+
+.contentHome{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 60vw;
+}
+
+.align{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loaderPage{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageLoading{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.circularProgressPages{
+    margin-top: 10px;
+    z-index: -1;
+}
+
+.welcome{
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentPage{
+    width: 60vw;
+    transition-duration: 1s ease-in-out;
+}
+
+.contentArrows{
+    width: 65vw;
+}
+
+.scroll{
+    overflow-x: scroll;
+    position: relative;
+}
+
+.divQr{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    padding-left: 20px;
+    top: 240px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    width: 170px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.iconQr{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.infosQr{
+    padding: 10px;
+}
+
+.titleQr{
+    margin-bottom: 10px;
+}
+
+.textQr{
+    color: rgb(172, 172, 172);
+    font-size: 10px;
+}
+
+.arrows{
+    cursor: pointer;
+    align-items: center;
+}
+
+.left{
+    margin-right: 20px;
+}
+
+.right{
+    margin-left: 20px;
+}
+
+.scroll::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: smooth;
+}
+
+.cursosInProgress{
+    text-decoration: none;
+    color: #009CE0;
+}
+
+.cardCarrousel{
+    display: flex;
+    white-space: nowrap;
+}

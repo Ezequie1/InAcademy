@@ -1,18 +1,19 @@
 package InAcademy.example.InAcademy.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.time.LocalTime;
-import java.util.Collection;
-import java.util.Set;
-
-@Data
+import java.time.LocalDateTime;
+import java.util.*;
+@Getter
+@Setter
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserModel implements UserDetails {
 
     @Id
@@ -23,12 +24,26 @@ public class UserModel implements UserDetails {
     private String email;
     private String password;
     @Lob
-    private byte[] userImage;
+    private String urlUserImage;
     private int userPoints;
     private String function;
-    private LocalTime lastSignin;
-    @OneToMany(mappedBy = "user")
-    private Set<RegistrationModel> registrations;
+    private LocalDateTime lastSignin;
+
+    @ManyToMany
+    @JoinTable(
+            name = "registrations",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private Set<CourseModel> enrolledCourses = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "favorites_courses",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private Set<CourseModel> favoritesCourses = new HashSet<>();
 
     public UserModel(String name, String email, String password) {
         this.name = name;
@@ -36,7 +51,7 @@ public class UserModel implements UserDetails {
         this.password = password;
     }
 
-    public UserModel(String name, String email, String password, int userPoints, String function, LocalTime lastSignin) {
+    public UserModel(String name, String email, String password, int userPoints, String function, LocalDateTime lastSignin) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -47,7 +62,7 @@ public class UserModel implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"));
     }
 
     @Override

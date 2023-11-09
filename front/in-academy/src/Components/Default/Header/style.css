@@ -1,0 +1,275 @@
+.navBar{
+    width: 100%;
+    background-color: #fff;
+    height: 10vh;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(196, 195, 195);
+    justify-content: space-between;
+}
+
+.itensNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 3%;
+}
+
+.logoInmetrics{
+    height: 7vh;
+    margin-left: 30px;
+}
+
+.searchBar{
+    width: 25vw;
+    margin-right: 1vw;
+    z-index: 2;
+    display: flex;
+    border: 1px solid rgb(184, 184, 184);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 5vh;
+}
+
+.searchBar:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+.searchBarFather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.icon{
+    cursor: pointer;
+    color: #818181;
+}
+
+.inputSearch{
+    width: 100%;
+    padding-left: 3px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.iconSearch{
+    padding-left: 10px;
+}
+
+.sideBar{
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: 0.4s ease-in-out;
+    box-shadow: 5px 0 5px -2px #c2c2c2;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.divIconClose{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    padding-right: 3%;
+    cursor: pointer;
+}
+
+.divIconInacademy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.logoInmetricsNav{
+    height: 8vh;
+} 
+
+.itemSideNav{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    padding: 2%;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.itemSideNav:hover{
+    padding-left: 5%;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.iconSideNav{
+    margin-right: 10px;
+}
+
+.userTooltip{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.changePhoto{
+    background-color: #818181;
+    border: 2px solid #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.divExit{
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+}
+
+.exit{
+    margin-right: 5px;
+}
+
+.simbols{
+    height: 64px;
+    width: 64px;
+}
+
+.selectedItem{
+    color: #009CE0;
+    padding-left: 5%;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.divSugestion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25vw;
+    transition: 0.2s ease-in-out;
+    background-color: #ffffff;
+    display: none;
+    border-radius: 5px;
+    margin-left: -15px;
+    position: absolute;
+    overflow: hidden;
+    display: block;
+    z-index: 100;
+    top:8vh;
+}
+
+.sugestion{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.imgSugestion{
+    width: 110px;
+    height: 70px;
+    border-radius: 5px;
+    margin: 7px;
+    margin-right: 10px;
+}
+
+.titleSugestion{
+    font-size: 15px;
+    font: 500;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.titleAutor{
+    font-size: 13px;
+    color: gray;
+    margin-right: 5px;
+    text-align: left;
+}
+
+.iconTime{
+    margin-left: 5px;
+    margin-right: 3px;
+} 
+
+.flex{
+    display: flex;
+    color: gray;
+    align-items: center;
+}
+
+.hour{
+    color: gray;
+    font-size: 13px;
+}
+
+.sugestion:hover{
+    background-color: #e6e6e6;
+    cursor:pointer;
+}
+
+.imgUser{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.userAndNotify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notify{
+    margin-right: 20px;
+}
+
+.principalDivTooltip{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emailUser{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #818181;
+}
+
+.divSimbols{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.points{
+    font-size: 17px;
+}
+
+.favoriteIcon:hover{
+    color: red;
+}

@@ -1,0 +1,67 @@
+.niveBarSkl{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    justify-content: space-between;
+}
+
+.bodyHomePage{
+    margin: 0;
+    width: 100%;
+}
+
+.iconSearchAndUserSkl{
+    margin-right: 40px;
+    gap: 20px;
+}
+
+.iconNavbarAndLogoSkl{
+    margin-left: 100px;
+    gap: 20px;
+}
+
+.infoContentSkl{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 60vw;
+    justify-content: space-between;
+}
+
+.cardSkl{
+    width: 370px;
+    height: 150px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.cardCourseNewSkl{
+    width: 200px;
+    height: 300px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coursesDivSkl{
+    gap: 18px;
+    width: 60vw;
+}
+
+.nameAndImageCourseSkl{
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.divButtonSkl{
+    position: relative;
+}
+
+.buttonSkl{
+    position: absolute;
+    bottom: 0px;
+}

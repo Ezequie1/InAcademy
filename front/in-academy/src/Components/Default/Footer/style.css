@@ -1,0 +1,33 @@
+.divFooter{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    height: 120px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 8vw;
+    padding-left: 8vw;
+}
+
+.logoFooter{
+    width: 160px;
+}
+
+.infosPolitica{
+    text-align: center;
+}
+
+.iconFooter{
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.iconFooter:hover{
+    color:#009CE0;
+}
+
+.divItensFooter{
+    justify-content: center;
+}

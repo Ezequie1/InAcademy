@@ -1,0 +1,99 @@
+.cardStyle{
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    padding: 5px;
+    width: 220px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+}
+
+.cardStyle:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #009CE0;
+}
+
+.divImageCard{
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    position: relative;
+}
+
+.imageCardNew{
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.new{
+    position: absolute;
+    z-index: 10;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: aliceblue;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.contentCard{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.author{
+    padding-top: 5px;
+    color: #9c9c9c;
+    font-size: 14px;
+}
+
+.avaliations{
+    padding-top: 3px;
+    padding-bottom: 2px;
+    color: #3a3a3a;
+    font-size: 16px;
+}
+
+.numberAvaliations{
+    color: #9c9c9c;
+    font-size: 13px;
+}
+
+.buttonCourse{
+    width: 150px;
+    font-size: 15px;
+    height: 35px;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    background-color: #009CE0;
+    transition: 0.4s ease-in-out;
+}
+
+.buttonCourse:hover{
+    cursor: pointer;
+}
+
+.divButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconFavorite, .iconNotFavorite{
+    margin-right: 10px;
+}
+
+.iconFavorite{
+    color: red;
+}

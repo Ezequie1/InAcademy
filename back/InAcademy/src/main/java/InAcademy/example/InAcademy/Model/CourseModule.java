@@ -13,8 +13,8 @@ public class CourseModule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nameModule;
-    @ManyToOne
-    @JoinColumn(name="id_course")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="id_course", referencedColumnName = "id")
     private CourseModel course;
     @Enumerated(EnumType.STRING)
     private StatusModel statusModule = StatusModel.NOT_STARTED;

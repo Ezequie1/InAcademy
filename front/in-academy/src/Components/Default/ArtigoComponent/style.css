@@ -1,0 +1,92 @@
+.divArtigo{
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.divFiltro{
+    text-align: center;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    width: 30%;
+    height: fit-content;
+}
+
+.divFiltro:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #009CE0;
+}
+
+.tituloFiltro{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.infoFiltro{
+    color: #8a8a8a;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.itemFilter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.itemFilter:hover{
+    background-color: #ececec;
+}
+
+.lineFilter{
+    display: flex;
+    align-items: center;
+}
+
+.totalItens{
+    color: #747474;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.cleanFilter{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009CE0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 10px;
+    height: 40px;
+    width: 140px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.divButtonFilter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artigos{
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    width: 80%;
+    height: 800px;
+    overflow-y: scroll;
+    margin-left: 30px;
+}
+
+.artigos::-webkit-scrollbar{
+    display: none;
+}
+

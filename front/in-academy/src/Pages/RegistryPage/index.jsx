@@ -1,19 +1,44 @@
 import React from "react";
 import './style.css'
-import logo from '../assets/logoIn.png'
-import { BackgroundVideo } from '../Default/Background/index';
-import logoAcademy from '../assets/logoSite.png'
-import logoMicrosoft from "../assets/microsoftLogo.png"
+import logo from '../../Components/assets/logoIn.png'
+import { BackgroundVideo } from '../../Components/Default/Background/index';
+import logoAcademy from '../../Components/assets/logoSite.png'
+import logoMicrosoft from "../../Components/assets/microsoftLogo.png"
 import { Link } from "react-router-dom";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
 import { useState } from "react";
+import { CircularProgress } from "@mui/material";
+import { Registry } from "../../Service/UserService";
+import { Navigate } from "react-router-dom";
 
 function RegistryPage(){
 
     const[see, setSee] = useState('password');
     const[eye, setEye] = useState(false)
+    const[loading, setLoading] = useState(<>Cadastre-se</>)
+    const[nome, setNome] = useState('');
+    const[email, setEmail] = useState('');
+    const[senha, setSenha] = useState('');
+
+
+    function sendForm(){
+
+        if(nome !== '', email !== '', senha !== ''){
+
+            setLoading(<CircularProgress style={{height: '25px', width: '25px'}}/>);
+
+            Registry(nome, email, senha).then((response) => {
+                if(response.status === 200){
+                    const interval = setInterval(() => {
+                        setLoading(<Navigate to='/'/>);
+                        clearInterval(interval)
+                    } , 1500);
+                }
+            }).catch((error) =>  setLoading(<>Cadastre-se</>))
+        }
+    }
 
     return(    
         <>
@@ -28,15 +53,15 @@ function RegistryPage(){
                         <p className="texts">Já possui conta? <span className="buttonCadastre"><Link to='/' className="link">Entrar</Link></span>!</p>
                         <div className="divInputs">
                             <div className="inputSingle">
-                                <input type="text" required className="inputStyle" id="name"/>
+                                <input type="text" required className="inputStyle" id="name" onChange={event => setNome(event.target.value)}/>
                                 <label htmlFor="name" className="inputLabel">Nome</label>
                             </div>
                             <div className="inputSingle">
-                                <input type="text" required className="inputStyle" id="email"/>
+                                <input type="text" required className="inputStyle" id="email" onChange={event => setEmail(event.target.value)}/>
                                 <label htmlFor="email" className="inputLabel">Email</label>
                             </div>
                             <div className="inputSingle">
-                                <input type={see} required className="inputStyle password" id="senha"/>
+                                <input type={see} required className="inputStyle password" id="senha" onChange={event => setSenha(event.target.value)}/>
                                 <label htmlForid="senha" className="inputLabel">Senha</label>
                                 {eye ?  
                                 <IconButton size="small">
@@ -56,8 +81,8 @@ function RegistryPage(){
                             </div>
                         </div>
                         <div className="divButton">
-                            <button className="button" >
-                                Cadastre-se
+                            <button className="button" onClick={sendForm}>
+                                { loading }
                             </button>
                         </div>
                         <div className="divOu">

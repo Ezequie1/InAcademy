@@ -1,0 +1,179 @@
+.rankingDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 30vh;
+    height: 60px;
+    width: 60px;
+    right: 70px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    transition: 0.4s ease-in-out;
+}
+
+.rankingDiv:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #FFCA00;
+}
+
+.iconRanking{
+    height: 30px;
+    width: 30px;
+}
+
+.titleMembers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.TitleRanking{
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+.iconCloseRanking{
+    cursor: pointer;
+    color: #747474;
+}
+
+.closeDiv{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    height: 40px;
+}
+.numbers{
+    color: #a1a1a1;
+    font-size: 15px;
+}
+
+.divRanking{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: fixed;
+    top: 15vh;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #c0c0c0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    transition: 0.3s ease-in-out;
+    height: 70vh;
+
+}
+
+.listMembers::-webkit-scrollbar{
+    display: none;
+}
+
+.listMembers{
+    overflow-y: scroll;
+}
+
+.iconUserMember{
+    border-radius: 50%;
+    z-index: 10;
+    margin-right: 10px;
+}
+
+.showMore{
+    color: #009CE0;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.yourDiv{
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.imageYou{
+    height: 60px;
+    width: 60px;
+}
+
+.itemListMembers{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    padding-left: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.itemListMembers:hover{
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
+
+.nameMember{
+    color: #050303;
+}
+
+.iconGold{
+    color: #FFCA00;
+    position: absolute;
+    right: 30px;
+}
+
+.iconPrata{
+    color: #a1a1a1;
+    position: absolute;
+    right: 30px;
+}
+
+.iconBronze{
+    color: #CD7F32;
+    position: absolute;
+    right: 30px;
+}
+
+.detailsUser{
+    display: flex;
+    flex-direction: column;
+}
+
+.iconAndPoints{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.cup{
+    color: #FFCA00;
+}
+
+.pointsUser{
+    color: #c0c0c0
+}
+
+.gold{
+    color: #FFCA00;
+}
+
+.prata{
+    color: #a1a1a1;
+}
+
+.bronze{
+    color: #CD7F32;
+}
+
+.textPoints{
+    color: #a1a1a1;
+    font-size: 12px;
+    margin-left: 5px;
+}
