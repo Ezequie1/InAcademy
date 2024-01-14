@@ -1,5 +1,6 @@
 package InAcademy.example.InAcademy.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +23,7 @@ public class AvaliationsModel {
     private String userEmail;
     private String commentTitle;
     private String comment;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="id_course")
     private CourseModel course;

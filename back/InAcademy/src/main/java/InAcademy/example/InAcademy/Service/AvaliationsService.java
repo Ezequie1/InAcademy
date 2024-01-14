@@ -1,6 +1,7 @@
 package InAcademy.example.InAcademy.Service;
 
 import InAcademy.example.InAcademy.Model.AvaliationsModel;
+import InAcademy.example.InAcademy.Model.CourseModel;
 import InAcademy.example.InAcademy.Model.DTO.AvaliationsDTO;
 import InAcademy.example.InAcademy.Model.UserModel;
 import InAcademy.example.InAcademy.Repositories.AvaliationsRepository;
@@ -24,6 +25,9 @@ public class AvaliationsService {
     @Autowired
     private CourseRepository courseRepository;
 
+    @Autowired
+    private AvaliationsRepository avaliationsRepository;
+
     public List<AvaliationsModel> getAvaliations() {
         return  repository.findAll();
     }
@@ -31,14 +35,37 @@ public class AvaliationsService {
     public AvaliationsModel createAvaliation(AvaliationsDTO avaliation) {
 
         UserModel user = userRepository.findByEmail(avaliation.email());
+        CourseModel course = courseRepository.findById(avaliation.courseId()).get();
 
-        return new AvaliationsModel(
+        AvaliationsModel newAvaliation = new AvaliationsModel(
                 user.getName(),
                 user.getEmail(),
                 avaliation.titleComment(),
                 avaliation.comment(),
-                courseRepository.findById(avaliation.courseId()).orElseThrow(),
+                courseRepository.findById(avaliation.courseId()).get(),
                 LocalDateTime.now(),
                 avaliation.avaliation());
+
+        course.getCourseComments().add(newAvaliation);
+
+        courseRepository.save(course);
+
+        addRateToCourse(course);
+
+        return avaliationsRepository.save(newAvaliation);
+    }
+
+    private void addRateToCourse(CourseModel course){
+
+        double avaliation = 0;
+
+        for( AvaliationsModel itemAva : course.getCourseComments()){
+            avaliation += itemAva.getAvaliation();
+        }
+
+        course.setAvaliation(avaliation / course.getCourseComments().size());
+
+        courseRepository.save(course);
+
     }
 }

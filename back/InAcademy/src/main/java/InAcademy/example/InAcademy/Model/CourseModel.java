@@ -41,8 +41,7 @@ public class CourseModel {
     @ManyToMany(mappedBy = "favoritesCourses")
     private Set<UserModel> favoritesCoursesUser = new HashSet<>();
 
-    @OneToMany
-    @JoinColumn(name="course")
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
     private List<AvaliationsModel> courseComments = new ArrayList<>();
 
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)

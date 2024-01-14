@@ -49,4 +49,33 @@ public class CourseService {
         return userRepository.save(user);
     }
 
+    public String addCourseToFavorite(String email, long courseId) {
+        UserModel user = userRepository.findByEmail(email);
+        CourseModel course = repository.findById(courseId).get();
+
+        user.getFavoritesCourses().add(course);
+
+        userRepository.save(user);
+        return "ADDED";
+    }
+
+    public CourseModel getCourseById(Long id) {
+        return repository.findById(id).get();
+    }
+
+    public String getTotalUsersInCourse(Long id) {
+        CourseModel course = repository.findById(id).get();
+
+        return Integer.toString(course.getUsers().size());
+
+    }
+
+    public String removeCourseToFavorite(String email, long courseId) {
+        UserModel user = userRepository.findByEmail(email);
+        CourseModel course = repository.findById(courseId).get();
+
+        user.getFavoritesCourses().remove(course);
+        userRepository.save(user);
+        return "REMOVED";
+    }
 }
