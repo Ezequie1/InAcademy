@@ -92,7 +92,6 @@ export function HomePageSkeeleton() {
                     </div>
                 </div>
             </div>
-            
         </div>
     )
 }

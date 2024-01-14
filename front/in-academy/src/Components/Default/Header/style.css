@@ -67,13 +67,13 @@
 
 .sideBar{
     height: 100%;
+    width: 20vw;
     background-color: rgb(255, 255, 255);
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
     box-shadow: 5px 0 5px -2px #c2c2c2;
     z-index: 10;
     position: fixed;
     top: 0;
-    left: 0;
     overflow-x: hidden;
 }
 

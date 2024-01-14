@@ -1,0 +1,43 @@
+.divCommentComponent{
+    width: 50vw;
+    border-radius: 5px;
+    border: solid 1px #c1c1c1;
+    padding: 15px;
+    gap: 20px;
+    display: flex;
+}
+
+.userInComment{
+    height: 60px;
+    width: 60px !important;
+    border-radius: 50%;
+}
+
+.infosComment{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.imageUserAndNameComment{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imageUserAndNameComment h2{
+    font-size: 20px;
+}
+
+.contentComment{
+    display: flex;
+    width: auto;
+    margin-top: 20px;
+    flex-direction: column;
+    padding-right: 50px;
+}
+
+.contentComment h4{
+    margin-bottom: 10px;
+}

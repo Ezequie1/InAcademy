@@ -1,0 +1,281 @@
+.backgroundImageCourse{
+    position: absolute;
+    z-index: -10;
+    top: 10vh;
+    height: 40vh;
+    width: 100%; 
+    background-color: linear-gradient(to right, black, transparent)
+}
+
+.backgroundImageCourseDiv{
+    position: absolute;
+    z-index: -5;
+    top: 10vh;
+    height: 40vh;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgb(0 0 0 / 100%) 0%, rgb(0 0 0 / 0%) 100%);
+}
+
+.infoCourseDiv{
+    width: 60vw;
+    background-color: rgba(240, 248, 255, 0);
+    margin-top: 15vh;
+    font-family: 'Montserrat';
+}
+
+.divPrincipalInfos{
+    gap: 40px;
+    width: 100%;
+    display: flex;
+    color: #717171;
+    width: 100%;
+}
+
+.imageCourse{
+    height: 22vh;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.spaceDivTitle{
+    width: 100%;
+    margin-top: 7vh;
+}
+
+.spaceDivTitle h2{
+    margin-top: 20px; 
+    margin-bottom: 10px;
+}
+
+.accordionModules{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.status{
+    color: #000000b7;
+    width: auto;
+    border-radius: 5px;
+    padding: 2px;
+    height: 25px;
+    width: 50px;
+    background-color: #717171;
+}
+
+.classroomAccordion{
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.flexClassroom{
+    display: flex;
+    align-items: center;
+}
+
+.infoClassroomAccordion{
+    margin-left: 15px;
+}
+
+
+.complete{
+    background-color: rgb(30, 255, 0);
+}
+
+.inProgress{
+    background-color: #009CE0;
+}
+
+
+.modalImageCourse{
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.modalImageCourse h5{
+    font-size: 14px;
+}
+
+.buttonInsrevase{
+    margin-top: 20px;
+    width: 100%;
+    height: 4vh;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: #009CE0;
+    border-radius: 5px;
+}
+
+.buttonInsrevase{
+    margin-top: 20px;
+    width: 100%;
+    height: 4vh;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: #009CE0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonFavorite{
+    margin-top: 10px;
+    width: 100%;
+    height: 4vh;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    border: none;
+    border: 2px solid #777777;
+    background-color: transparent;
+    color: #777777;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.buttonFavorite:hover{
+    color: red;
+}
+
+.describeInfoCourses {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.totalUsers{
+    text-decoration: none;
+}
+
+.describeInfoCourses div{
+    font-size: 17px;
+}
+
+
+.describeInfoCourses div p{
+    margin-left: 10px;
+}
+
+
+.nameAndAuthorCourse{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    color: #fff;
+    gap: 10px;
+}
+
+.diferenciaisCourse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    height: 8vh;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+
+.diferenciaisCourse span{
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.classroomAccordion:hover{
+    background-color: #e6e6e6;
+}
+
+.titleClassroom{
+    color: #000000de;
+}
+
+.timeClass{
+    color: #000000de;
+    margin-right: 10px;
+}
+
+.uncheckClassroom{
+    color: #717171;
+}
+
+.completeClassroom{
+    color: green;
+}
+
+.iconVideo{
+    color: #000000b7;
+    margin-right: 10px;
+}
+
+.timerClassroom{
+    color: #717171;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.nameAndAuthorCourse h3{
+    color: rgb(146, 142, 142)
+}
+
+.estudeNow{
+    color: #000;
+}
+
+.divComentsCourse{
+    width: 60vw;
+    margin-top: 5vh;
+    color: #717171;
+}
+
+.divComentsCourse h1{
+    font-size: 24px;
+    height: auto;
+}
+
+.commentDiv{
+    width: 60vw;
+    padding-top: 30px;
+    gap: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.commentDiv h5{
+    color: #009CE0;
+    cursor: pointer;
+}
+
+.usersToView{
+    margin-top: 5vh;
+}
+
+.nameSectionUsersToView{
+    color: #717171;
+    font-size: 20px;
+    margin-bottom: 40px;
+}

@@ -26,6 +26,7 @@ function LoginPage(){
             setLoading(<CircularProgress style={{height: '25px', width: '25px', color: '#000'}}/>)
 
             Login(email, senha).then((response) => {
+
                 setCookie(null, 'session_user', response.data.token, {
                     maxAge: 86400 * 2,
                     path: '/'
@@ -41,9 +42,8 @@ function LoginPage(){
                     clearInterval(interval)
                 } , 1500);
                 
-            }).catch((error) => {
+            }).catch(() => {
                 setLoading(<>Login</>)
-                console.error(error)
             })
 
         }

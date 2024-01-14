@@ -12,7 +12,7 @@ import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import GroupsIcon from '@mui/icons-material/Groups';
 import HomeIcon from '@mui/icons-material/Home';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Tooltip } from 'react-tooltip';
 import trofeuImg from '../../assets/trofeu.png'
 import estrela from '../../assets/estrela.png';
@@ -22,29 +22,28 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { getSugestions } from "../../../Service/CoursesService/courses";
 import CircularProgress from '@mui/material/CircularProgress';
 import ErrorIcon from '@mui/icons-material/Error';
+import { destroyCookie } from "nookies";
 
-export function Header({user: user}){
-    const [openNav, setNav] = useState('0px')
-    const [selected, setSelected] = useState('home')
+export function Header({user, pageSelected}){
+
+    const [openNav, setNav] = useState('-21vw')
     const [seeSugestion, setSugestions] =useState('0px')
     const [seeBorderSugestion, setBorder] = useState('none')
     const [star, setStar] = useState(0);
     const [trofeu, setTrofeu] = useState(0);
     const [contentSugestion, setContentSugestion] = useState(<CircularProgress style={{marginTop:'20px', marginBottom: '20px', color: 'gray'}}/>);
 
-    function setSelection(props){
-        document.getElementById(selected).classList.remove('selectedItem')
-        setSelected(props.id)
-        document.getElementById(props.id).classList.add('selectedItem')
-
+    function openSideNav(){
+        if(openNav == '-21vw') {
+            setNav('0')
+        }else{
+            setNav('-21vw')
+        }
     }
 
-    function openSideNav(){
-        if(openNav == '0px') {
-            setNav('20vw')
-        }else{
-            setNav('0px')
-        }
+    function finishSession(){
+        destroyCookie(null, 'session_user')
+        destroyCookie(null, 'email')
     }
 
     async function takeSugestions(value){
@@ -112,6 +111,10 @@ export function Header({user: user}){
         }
     }
 
+    function verifyPage(id){
+        return id === pageSelected ? "itemSideNav selectedItem" : "itemSideNav";
+    }
+
     return(
 
         <>
@@ -122,7 +125,7 @@ export function Header({user: user}){
 
                 <MenuRoundedIcon className="icon" fontSize="large" onClick={openSideNav}/>
 
-                <Link to="http://localhost:3000/home">
+                <Link to="http://localhost:3000/home" style={{textDecoration: "none"}}>
 
                     <img src={logoInmetrics} className="logoInmetrics" />
 
@@ -186,11 +189,11 @@ export function Header({user: user}){
                         </div>
                         <div>
                             <img src={estrela} alt="" className="simbols" />
-                            <h4 id='points' className="points">10</h4>
+                            <h4 id='points' className="points">{user.userPoints}</h4>
                             <p>Pontos</p>
                         </div>
                     </div>
-                    <Link to='/' className="divExit">
+                    <Link to='/' className="divExit" style={{textDecoration: 'none'}} onClick={ () => {finishSession()} }>
                         <p className="exit">Sair</p><LogoutOutlinedIcon/>
                     </Link>
                 </Tooltip>
@@ -198,7 +201,7 @@ export function Header({user: user}){
 
         </div>
         
-        <div className="sideBar" id="sideNav" style={{width: openNav}}>
+        <div className="sideBar" id="sideNav" style={{left: openNav}}>
 
             <div className="divIconClose">
 
@@ -211,47 +214,56 @@ export function Header({user: user}){
                 <img src={logoInmetrics} className="logoInmetricsNav" />
 
             </div>
+            <Link to="/home" style={{textDecoration: "none", color: "black"}}>
+                <div className={verifyPage("home")} id="home">
 
-            <div className='itemSideNav selectedItem' id="home" onClick={(event) => setSelection(event.currentTarget)}>
+                    <HomeIcon fontSize="large" className="iconSideNav"/>
 
-                <HomeIcon fontSize="large" className="iconSideNav"/>
+                    <p>Home</p>
 
-                <p>Home</p>
+                </div>
+            </Link>
+            
+            <Link to="/user/meu-aprendizado" style={{textDecoration: "none", color: "black"}}>
+                <div className={verifyPage("meuAprendizado")} id="meuAprendizado" >
 
-            </div>
+                    <SchoolIcon fontSize="large" className="iconSideNav"/>
 
-            <div className='itemSideNav' id="MyAprendizado" onClick={(event) => setSelection(event.currentTarget)}>
+                    <p>Meu aprendizado</p>
 
-                <SchoolIcon fontSize="large" className="iconSideNav"/>
+                </div>
+            </Link>
 
-                <p>Meu aprendizado</p>
+            <Link to="/comunidades" style={{textDecoration: "none", color: "black"}}>
+                <div className={verifyPage("comunidades")} id="comunidades">
 
-            </div>
+                    <LanguageIcon fontSize="large" className="iconSideNav"/>
 
-            <div className='itemSideNav' id="comunidades" onClick={(event) => setSelection(event.currentTarget)}>
+                    <p>Comunidades</p>
 
-                <LanguageIcon fontSize="large" className="iconSideNav"/>
+                </div>
+            </Link>
 
-                <p>Comunidades</p>
+            <Link to="/cursos/todos" style={{textDecoration: "none", color: "black"}}>
+                <div className={verifyPage("allcourses")} id="allcourses">
 
-            </div>
+                    <AutoStoriesIcon fontSize="large" className="iconSideNav"/>
 
-            <div className='itemSideNav' id="allcourses" onClick={(event) => setSelection(event.currentTarget)}>
+                    <p>Todos os cursos</p>
 
-                <AutoStoriesIcon fontSize="large" className="iconSideNav"/>
+                </div>
+            </Link>
 
-                <p>Todos os cursos</p>
 
-            </div>
+            <Link to="/membros/todos" style={{textDecoration: 'none', color: 'black'}}>
+                <div className={verifyPage("membros")} id="membros">
 
-            <div className='itemSideNav' id="membros" onClick={(event) => setSelection(event.currentTarget)}>
+                    <GroupsIcon fontSize="large" className="iconSideNav" style={{color: 'black'}}/>
 
-                <GroupsIcon fontSize="large" className="iconSideNav" />
+                    <p style={{ color: 'black'}}>Membros</p>
 
-                <p>Membros</p>
-
-            </div>
-
+                </div>
+            </Link>
         </div>
 
         </>

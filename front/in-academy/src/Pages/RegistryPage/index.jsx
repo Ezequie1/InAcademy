@@ -27,7 +27,7 @@ function RegistryPage(){
 
         if(nome !== '', email !== '', senha !== ''){
 
-            setLoading(<CircularProgress style={{height: '25px', width: '25px'}}/>);
+            setLoading(<CircularProgress style={{height: '25px', width: '25px', color: '#000'}}/>);
 
             Registry(nome, email, senha).then((response) => {
                 if(response.status === 200){

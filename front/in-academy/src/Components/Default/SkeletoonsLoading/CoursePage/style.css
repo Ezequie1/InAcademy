@@ -1,0 +1,29 @@
+.backSkeeletonCoursePage{
+    background-color: rgb(216, 216, 216);
+    position: absolute;
+    z-index: -100;
+    top: 10vh;
+    left: 0;
+    height: 40vh;
+    width: 100vw;
+}
+
+.courseImageAndInfosSkeletoon{
+    display: flex;
+    width: 60vw;
+    margin-top: 17vh;
+    gap: 5vh;
+}
+
+.courseImageAndInfosSkeletoon div span{
+    margin-bottom: 10px;
+}
+
+.divInfosCourseSkeeleton{
+    margin-top: 8vh;
+    width: 100%;
+}
+
+.divInfosCourseSkeeleton div{
+    margin-top: 20px;
+}
